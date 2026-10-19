@@ -120,7 +120,7 @@ function CategoryCards() {
 }
 
 function HeroProductCarousel() {
-  const featured = products.filter(product => ['turtle-toy', 'character-mug', 'pastel-vase', 'yellow-car', 'cloud-diffuser', 'green-gem-ring', 'blossom-night-lamp', 'sage-mini-fan', 'botanical-scarf'].includes(product.id));
+  const featured = products.filter(product => ['turtle-toy', 'character-mug', 'pastel-vase', 'yellow-car', 'cloud-diffuser', 'green-gem-ring', 'blossom-night-lamp', 'sage-mini-fan', 'botanical-scarf', 'mini-crossbody-bag', 'mushroom-night-light', 'wireless-earbuds', 'retro-sunglasses'].includes(product.id));
   const [index, setIndex] = useState(0);
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -149,10 +149,11 @@ function ProductGrid({ items }) {
 }
 
 function HomePage() {
+  const homeFeatured = ['turtle-toy', 'cloud-diffuser', 'green-gem-ring', 'botanical-scarf', 'bear-mug', 'mini-crossbody-bag', 'wireless-earbuds', 'scented-candle'].map(id => products.find(product => product.id === id)).filter(Boolean);
   return <>
     <main><section className="hero-section wrap"><div className="hero-panel"><div className="hero-image"/><div className="hero-copy"><span className="eyebrow"><i/> চীন থেকে যত্ন করে বেছে আনা</span><h1>প্রতিদিনের জীবনে<br/><em>নতুন কিছু।</em></h1><p>ছোট্ট কোনো আবিষ্কার, আপনার দিনের বড় স্বস্তি। দরকারি আর সুন্দর—এমন সব পণ্য এক জায়গায়।</p><div className="hero-buttons"><Link className="button" to="/shop">পণ্য ঘুরে দেখুন <Icon name="arrow"/></Link><a className="text-button" href={`tel:${phone}`}>অর্ডার নিয়ে কথা বলুন</a></div><div className="hero-proof"><span className="proof-mark"><Icon name="check" size={15}/></span><span>মিরপুর ১২-তে আমাদের শোরুম<br/><small>ঢাকা, বাংলাদেশ</small></span></div></div><HeroProductCarousel/><div className="hero-float"><span>NOTUN KICHU</span><strong>একটু অন্যরকম,<br/>ভীষণ দরকারি</strong><Link to="/about">আমাদের গল্প <Icon name="arrow" size={14}/></Link></div><span className="hero-index">N° 01 / DHAKA</span></div></section>
       <section className="section-block wrap"><div className="section-heading"><div><span className="section-kicker">আপনার পছন্দমতো</span><h2>ক্যাটাগরি ঘুরে দেখুন</h2><p>ভালো লাগার মতো নতুন কিছু খুঁজে নিন</p></div><Link className="under-link" to="/shop">সব পণ্য <Icon name="arrow" size={16}/></Link></div><CategoryCards/></section>
-      <section className="featured-band"><div className="wrap"><div className="section-heading"><div><span className="section-kicker">দোকানের ছবিতে দেখা</span><h2>এই মুহূর্তের পছন্দ</h2><p>প্রতিটি পণ্যের জন্য আলাদা স্টুডিও ভিজ্যুয়াল</p></div><Link className="under-link" to="/shop">সব পণ্য <Icon name="arrow" size={16}/></Link></div><ProductGrid items={products.slice(0, 8)}/></div></section>
+      <section className="featured-band"><div className="wrap"><div className="section-heading"><div><span className="section-kicker">দোকানের ছবিতে দেখা</span><h2>এই মুহূর্তের পছন্দ</h2><p>প্রতিটি পণ্যের জন্য আলাদা স্টুডিও ভিজ্যুয়াল</p></div><Link className="under-link" to="/shop">সব পণ্য <Icon name="arrow" size={16}/></Link></div><ProductGrid items={homeFeatured}/></div></section>
       <section className="service-strip wrap"><div><span className="service-icon"><Icon name="sparkle" size={17}/></span><strong>নতুন কিছু খুঁজে নিন</strong><small>দোকানের সংগ্রহ থেকে বেছে নিন</small></div><div><span className="service-icon"><Icon name="tag" size={17}/></span><strong>দাম ও মডেল জেনে নিন</strong><small>পণ্যের তথ্য সরাসরি জেনে নিন</small></div><div><span className="service-icon"><Icon name="chat" size={17}/></span><strong>অর্ডার নিয়ে কথা বলুন</strong><small>আমাদের সঙ্গে সহজে যোগাযোগ করুন</small></div></section>
       <section className="story-teaser wrap"><div className="story-image"><img src="/assets/store-interior.jpg" alt="Notun Kichu শোরুমে সাজানো পণ্য" loading="lazy"/></div><div className="story-teaser-copy"><span className="section-kicker">আমাদের ছোট্ট গল্প</span><h2>নতুন কিছু খুঁজে পাওয়ার আনন্দ।</h2><p>চীন থেকে এমন সব পণ্য খুঁজে আনি, যা দেখতে সুন্দর, কাজে লাগে, আর দৈনন্দিন জীবনে যোগ করে একটু বাড়তি স্বস্তি।</p><Link className="under-link" to="/about">Notun Kichu সম্পর্কে <Icon name="arrow" size={16}/></Link></div></section>
       <ContactCallout/>
