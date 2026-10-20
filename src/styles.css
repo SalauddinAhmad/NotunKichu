@@ -45,8 +45,12 @@ img { display: block; max-width: 100%; }
 .app-shell > main { flex: 1; }
 .wrap { width: min(1180px, calc(100% - 56px)); margin-inline: auto; }
 
-.announcement { height: 34px; display: flex; justify-content: center; align-items: center; gap: 9px; padding: 0 16px; color: #fff8eb; background: #70412f; font-size: 11px; letter-spacing: .1px; }
-.announcement span { color: #e2b586; }
+.announcement { min-height: 43px; display: flex; justify-content: center; align-items: center; gap: 11px; padding: 6px 16px; color: #fff8eb; background: linear-gradient(100deg, #503023, #784331 48%, #503023); font-size: 12px; letter-spacing: .1px; }
+.announcement-label { padding: 3px 9px; border: 1px solid #f6dfbf65; border-radius: 20px; color: #ffe3bf; font-size: 10px; white-space: nowrap; }
+.announcement-message { color: #fff8eb; }
+.announcement a { display: inline-flex; align-items: center; gap: 5px; color: #ffe1b9; font-weight: 700; white-space: nowrap; }
+.announcement a svg { transition: transform .2s; }
+.announcement a:hover svg { transform: translateX(3px); }
 .site-header { position: sticky; top: 0; z-index: 30; background: #f8f5efe9; border-bottom: 1px solid #e8e0d6c9; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
 .header-row { height: 78px; display: flex; align-items: center; gap: 26px; }
 .brand { display: inline-flex; align-items: center; gap: 9px; flex: 0 0 220px; }
@@ -351,7 +355,9 @@ img { display: block; max-width: 100%; }
 @media (max-width: 760px) {
   body { padding-bottom: calc(86px + env(safe-area-inset-bottom)); }
   .wrap { width: calc(100% - 34px); }
-  .announcement { height: 30px; gap: 5px; font-size: 9px; }
+  .announcement { min-height: 38px; flex-wrap: wrap; gap: 3px 7px; padding: 5px 10px; font-size: 10px; line-height: 1.35; }
+  .announcement-label { padding: 2px 7px; font-size: 8px; }
+  .announcement a { font-size: 9px; }
   .header-row { height: 64px; gap: 8px; }
   .brand { flex: 1 1 auto; gap: 7px; min-width: 0; }
   .brand img { width: 43px; height: 43px; border-radius: 12px; }
