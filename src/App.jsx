@@ -76,7 +76,7 @@ function Header() {
     setSearchOpen(false);
   };
   return <>
-    <div className="announcement"><span className="announcement-label">বিশেষ ঘোষণা</span><span className="announcement-message">সম্পূর্ণ Notun Kichu ওয়েবসাইটটি বিক্রয় হবে</span><a href="mailto:aladinsgfx@gmail.com">আগ্রহী? ইমেইল করুন <Icon name="arrow" size={13}/></a></div>
+    <div className="announcement"><span className="announcement-label">বিক্রয়ের সুযোগ</span><span className="announcement-message"><strong>Notun Kichu</strong> — ডোমেইন ও সম্পূর্ণ ওয়েবসাইট একসাথে বিক্রয় হবে</span><a href="mailto:aladinsgfx@gmail.com?subject=Notun%20Kichu%20website%20and%20domain%20inquiry">বিস্তারিত জানতে ইমেইল করুন <Icon name="arrow" size={13}/></a></div>
     <header className="site-header"><div className="wrap header-row">
       <Link className="brand" to="/" aria-label="Notun Kichu হোম"><img src="/assets/notun-kichu-logo.png" alt="Notun Kichu লোগো"/><span className="brand-copy">notun kichu<small>প্রতিদিনের জীবনে নতুন কিছু</small></span></Link>
       <nav className="desktop-nav" aria-label="প্রধান নেভিগেশন">

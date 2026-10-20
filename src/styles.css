@@ -45,10 +45,12 @@ img { display: block; max-width: 100%; }
 .app-shell > main { flex: 1; }
 .wrap { width: min(1180px, calc(100% - 56px)); margin-inline: auto; }
 
-.announcement { min-height: 43px; display: flex; justify-content: center; align-items: center; gap: 11px; padding: 6px 16px; color: #fff8eb; background: linear-gradient(100deg, #503023, #784331 48%, #503023); font-size: 12px; letter-spacing: .1px; }
-.announcement-label { padding: 3px 9px; border: 1px solid #f6dfbf65; border-radius: 20px; color: #ffe3bf; font-size: 10px; white-space: nowrap; }
+.announcement { min-height: 46px; display: flex; justify-content: center; align-items: center; gap: 12px; padding: 6px 16px; color: #fff8eb; background: linear-gradient(100deg, #503023, #784331 48%, #503023); font-size: 12px; letter-spacing: .1px; }
+.announcement-label { padding: 4px 10px; border: 1px solid #f6dfbf65; border-radius: 20px; background: #ffffff0d; color: #ffe3bf; font-size: 10px; white-space: nowrap; }
 .announcement-message { color: #fff8eb; }
-.announcement a { display: inline-flex; align-items: center; gap: 5px; color: #ffe1b9; font-weight: 700; white-space: nowrap; }
+.announcement-message strong { color: #ffe1b9; font-weight: 700; }
+.announcement a { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid #ffe1b942; border-radius: 20px; background: #ffffff0c; color: #ffe1b9; font-weight: 700; white-space: nowrap; transition: background .2s, border-color .2s; }
+.announcement a:hover { border-color: #ffe1b97a; background: #ffffff1b; }
 .announcement a svg { transition: transform .2s; }
 .announcement a:hover svg { transform: translateX(3px); }
 .site-header { position: sticky; top: 0; z-index: 30; background: #f8f5efe9; border-bottom: 1px solid #e8e0d6c9; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
@@ -355,9 +357,10 @@ img { display: block; max-width: 100%; }
 @media (max-width: 760px) {
   body { padding-bottom: calc(86px + env(safe-area-inset-bottom)); }
   .wrap { width: calc(100% - 34px); }
-  .announcement { min-height: 38px; flex-wrap: wrap; gap: 3px 7px; padding: 5px 10px; font-size: 10px; line-height: 1.35; }
+  .announcement { min-height: 54px; flex-wrap: wrap; gap: 3px 7px; padding: 6px 10px; font-size: 10px; line-height: 1.35; }
   .announcement-label { padding: 2px 7px; font-size: 8px; }
-  .announcement a { font-size: 9px; }
+  .announcement-message { flex: 0 1 auto; }
+  .announcement a { padding: 3px 8px; font-size: 9px; }
   .header-row { height: 64px; gap: 8px; }
   .brand { flex: 1 1 auto; gap: 7px; min-width: 0; }
   .brand img { width: 43px; height: 43px; border-radius: 12px; }
